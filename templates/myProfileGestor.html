@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Control Group</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/fullEstil.css" type="text/css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="myProfileGestor.html"><!--ENLLAÇ HTML PER A CANVIAR-->
+                <img src="../static/usuario.png" alt="user icon" width="50px"><!--RUTA IMATGE PER A CANVIAR-->
+                <h5 class="d-inline ms-2">Nombre del usuario</h5>
+            </a>
+        </div>
+    </nav>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb p-3  rounded-3 ms-2">
+            <li class="breadcrumb-item"><a href="homePageGestor.html">Inici</a></li>
+            <li class="breadcrumb-item active" aria-current="page">El meu perfil</li>
+        </ol>
+    </nav>
+
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <img src="../static/usuario.png" alt="Imagen de Usuario" class="img-fluid rounded-circle"
+                                style="width: 150px;">
+                            {% if data and 'Nom' in data[0] %}
+                            <h3 class="mt-2">{{ data[0]['Nom'] }}</h3>
+                            {% else %}
+                            <h3>Nom d'usuari</h3>
+                            {% endif %}
+                        </div>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="usuario" class="form-label">Usuario</label>
+                                        <input type="text" class="form-control" id="usuario"
+                                            value="{{data[0]['Usuari']}}" name="usuari" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="contrasenya" class="form-label">Contraseña</label>
+                                        <input type="password" class="form-control" id="contrasenya"
+                                            value="{{data[0]['Contrasenya']}}" name="contrasenya">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="cifDni" class="form-label">CIF/DNI</label>
+                                        <input type="text" class="form-control" id="cifDni"
+                                            value="{{data[0]['CIF_DNI']}}" name="cifDni">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="nom" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="nom" name="nom"
+                                            value="{{data[0]['Nom']}}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="cognom" class="form-label">Apellido</label>
+                                        <input type="text" class="form-control" id="cognom" name="cognom"
+                                            value="{{data[0]['Cognom']}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="telefonContacte" class="form-label">Teléfono de Contacto</label>
+                                        <input type="tel" class="form-control" id="telefonContacte"
+                                            value="{{data[0]['TelefonContacte']}}" name="tlf">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="emailContacte" class="form-label">Email de Contacto</label>
+                                        <input type="email" class="form-control" id="emailContacte"
+                                            value="{{ data[0]['EmailContacte'] }}" name="email">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="domicili" class="form-label">Domicilio</label>
+                                        <input type="text" class="form-control" id="domicili" name="direccio"
+                                            value="{{data[0]['Domicili']}}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="codiPostal" class="form-label">Código Postal</label>
+                                        <input type="text" class="form-control" id="codiPostal" name="cp"
+                                            value="{{data[0]['CodiPostal']}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="municipi" class="form-label">Municipio</label>
+                                        <input type="text" class="form-control" id="municipi" name="municipi"
+                                            value="{{data[0]['Municipi']}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="provincia" class="form-label">Provincia</label>
+                                        <input type="text" class="form-control" id="provincia" name="provincia"
+                                            value="{{data[0]['Provincia']}}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="treball" class="form-label">Trabajo</label>
+                                        <input type="text" class="form-control" id="treball" name="treball"
+                                            value="{{data[0]['Treball']}}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center my-4">
+                                <button type="button" class="btn btn-custom" id="editarPerfil">Editar Perfil</button>
+                                <p class="d-none text-success" id="tot_ok">Perfil editat correctament</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

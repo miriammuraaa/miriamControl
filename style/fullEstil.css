@@ -1,0 +1,38 @@
+body {
+    background-color: #F5F5F5;
+    font-family: 'Montserrat', sans-serif;
+}
+/*------------------------------BOTONES----------------------------------*/
+
+/*Boton completamente verde*/
+.btn-custom {
+    background-color: #77BC1F;
+    border-color: #77BC1F;
+    color: white;
+}
+
+/*boton transparente con borde verde*/
+.btn-custom2 {
+    background-color: transparent;
+    border-color: #77BC1F;
+    color: #77BC1F;
+}
+
+/*hover para los 2 tipos de boton*/
+.btn-custom:hover {
+    background-color: #78bc1f88;
+    border-color: #77BC1F;
+    color: white;
+}
+
+.btn-custom2:hover {
+    background-color: #78bc1f88;
+    border-color: #77BC1F;
+    color: white;
+}
+
+/*------------------------------Mensaje de error----------------------------------*/
+.error-message {
+    color: red;
+    font-size: 15px;
+}

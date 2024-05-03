@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Control Group</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../style/fullEstil.css" type="text/css">
+</head>
+
+<body>
+    <nav class="navbar ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="myProfileGestor.html"><!--ENLLAÇ HTML PER A CANVIAR-->
+                <img src="../static/usuario.png" alt="user icon" width="50px"><!--RUTA IMATGE PER A CANVIAR-->
+                <h5 class="d-inline ms-2">Nombre del usuario</h5>
+            </a>
+        </div>
+    </nav>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb p-3  rounded-3 ms-2">
+            <li class="breadcrumb-item"><a href="homePageGestor.html">Inici</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Gestor</li>
+        </ol>
+    </nav>
+
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 mb-2">
+                    <div class="card text-center h-100" style="background-color: #B6BBC3;">
+                        <div class="card-body">
+                            <div class="mb-4"></div>
+                            <img class="img-fluid mb-3" src="../static/proceso.png" alt=""
+                                width="100px"><!--RUTA IMATGE PER A CANVIAR-->
+                            <div class="mb-2"></div>
+                            <p><strong>Perfil Gestor</strong></p>
+                            <div class="mb-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 d-flex align-items-center justify-content-between mb-4">
+                    <h5>Llistat de <strong>Tècnics</strong></h5>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Id tècnic" aria-label="Buscar">
+                        <button class="btn btn-outline-success btn-custom" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <!--primer tècnic-->
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-2 col-4">
+                                    <img src="../static/usuario.png" alt="user"
+                                        style="width: 60px;"><!--RUTA IMATGE PER A CANVIAR-->
+                                </div>
+                                <div class="col-md-4 col-4">
+                                    <h5 class="card-title">Nom del tècnic</h5>
+                                </div>
+                                <div class="col-md-4 col-4 text-md-end">
+                                    <p class="card-text">Id tècnic</p>
+                                </div>
+                                <div class="col-md-2 col-12 text-md-end">
+                                    <a href="gestorRoute.html" class="btn btn-custom2">Assignar
+                                        ruta</a><!--ENLLAÇ HTML PER A CANVIAR-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--segon tècnic-->
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-2 col-4">
+                                    <img src="../static/usuario.png" alt="user"
+                                        style="width: 60px;"><!--RUTA IMATGE PER A CANVIAR-->
+                                </div>
+                                <div class="col-md-4 col-4">
+                                    <h5 class="card-title">Nom del tècnic</h5>
+                                </div>
+                                <div class="col-md-4 col-4 text-md-end">
+                                    <p class="card-text">Id tècnic</p>
+                                </div>
+                                <div class="col-md-2 col-12 text-md-end">
+                                    <a href="gestorRoute.html" class="btn btn-custom2">Assignar
+                                        ruta</a><!--ENLLAÇ HTML PER A CANVIAR-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--tercer tècnic-->
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-2 col-4">
+                                    <img src="../static/usuario.png" alt="user"
+                                        style="width: 60px;"><!--RUTA IMATGE PER A CANVIAR-->
+                                </div>
+                                <div class="col-md-4 col-4">
+                                    <h5 class="card-title">Nom del tècnic</h5>
+                                </div>
+                                <div class="col-md-4 col-4 text-md-end">
+                                    <p class="card-text">Id tècnic</p>
+                                </div>
+                                <div class="col-md-2 col-12 text-md-end">
+                                    <a href="gestorRoute.html" class="btn btn-custom2">Assignar
+                                        ruta</a><!--ENLLAÇ HTML PER A CANVIAR-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
